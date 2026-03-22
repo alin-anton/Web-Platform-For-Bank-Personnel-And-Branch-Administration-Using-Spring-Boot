@@ -1,0 +1,134 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    --lux-bg-1: #050506;
+    --lux-bg-2: #1e1e20;
+    --lux-accent: #c9b873;
+    --lux-text: #e6e6e6;
+    background-image: url(../img/oras.png);
+    background-size:cover;
+    color: var(--lux-text);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+
+
+h1{
+    font-size: 2.5em;
+    color: var(--lux-text);
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    font-size: 2em;
+    color: var(--lux-text);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-primary{
+    background-color: var(--lux-accent);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btn-primary:hover{
+    background-color: #aa9b50;
+    cursor: pointer;
+}
+
+.btn-primary:hover:active{
+    background-color: #aa9b50 !important;
+    border-color: #aa9b50 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.table{
+    border: #2e2e31 2px solid;
+    border-radius: 100px;
+}
+
+.form-control{
+    background-color: var(--lux-bg-2);
+    color: var(--lux-text);
+    border: 1px solid #2e2e31;
+    width: 50%;
+}
+
+.form-control:focus{
+    background-color: var(--lux-bg-2);
+    color: var(--lux-text);
+    border: 1px solid var(--lux-accent);
+    box-shadow: none;
+}
+
+.butoane a{
+    color: var(--lux-text);
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.butoane a:hover{
+    color: var(--lux-accent);
+    transition-duration: 0.25s;
+}
+
+p{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main{
+    background-color: rgba(0, 0, 0, 0.256);
+    border-radius: 30px; 
+    padding: 10px; 
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.main:hover{
+    background-color: rgba(0, 0, 0, 0.395);
+    transition-duration: 0.3s;
+}
+
+.main ul{
+    text-align: left;
+    display: inline-block;
+    margin-top: 20px;
+    
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.364);
+}
+
+.table th, .table td{
+    background-color: rgba(0, 0, 0, 0.449);
+    color: var(--lux-text);
+}
+table.table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  table.table th,
+  table.table td {
+    white-space: normal;        /* permite wrap pe mai multe linii */
+    overflow-wrap: break-word; /* sparge cuvinte prea lungi */
+    word-break: break-word;    /* compatibilitate suplimentară */
+    vertical-align: top;       /* extindere vizuală de sus în jos */
+  }

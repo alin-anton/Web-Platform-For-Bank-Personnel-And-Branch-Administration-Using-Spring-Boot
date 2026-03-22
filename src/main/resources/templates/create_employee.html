@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee form!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/indexstyle.css}">
+    <link rel="icon" type="image/png" th:href="@{/img/upb.png}">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar" id="navigatie">
+
+
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/}">
+                    <img th:src="@{/img/upb.png}" alt="Bootstrap" width="30" height="24" style="border-radius: 50%;">
+                </a>
+                <div class="butoane">
+                    <a th:href="@{/bank}">Bank</a>
+                    <a th:href="@{/branches}">Branches</a>
+                    <a th:href="@{/employees}">Employees</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <form action="" style="margin:50px;" th:action="@{/employees}" th:object="${employees}" method="POST">
+            <div class="form-group">
+                <label>fnameEmployee:</label>
+                <input type="text" class="form-control" name="fnameEmployee" th:field="*{fnameEmployee}" placeholder="Preume:">
+            </div>
+
+            <div class="form-group">
+                <label>lnameEmployee:</label>
+                <input type="text" class="form-control" name="lnameEmployee" th:field="*{lnameEmployee}" placeholder="Nume:">
+            </div>
+
+            <div class="form-group">
+                <label>cnpEmployee:</label>
+                <input type="text" class="form-control" name="cnpEmployee" th:field="*{cnpEmployee}" placeholder="CNP:">
+            </div>
+
+            <div class="form-group">
+                <label>positionEmployee:</label>
+                <input type="text" class="form-control" name="positionEmployee" th:field="*{positionEmployee}" placeholder="Post ocupat:">
+            </div>
+
+            <div class="form-group">
+                <label>salaryEmployee:</label>
+                <input type="number" class="form-control" name="salaryEmployee" step="0.01" th:field="*{salaryEmployee}" placeholder="Salariu:">
+            </div>
+
+            <div class="form-group">
+                <label>employmentDate:</label>
+                <input type="date" class="form-control" name="employmentDate" th:field="*{employmentDate}" placeholder="Data angajarii:">
+            </div>
+
+            <div class="form-group">
+                <label>bankEmployee:</label>
+                <input type="number" class="form-control" name="bankEmployee" th:field="*{bankEmployee}" placeholder="Banca:">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin: 15px;">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

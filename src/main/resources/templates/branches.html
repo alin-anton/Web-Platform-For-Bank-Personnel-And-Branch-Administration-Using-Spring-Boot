@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelul Branches!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/indexstyle.css}">
+    <link rel="icon" type="image/png" th:href="@{/img/upb.png}">
+  </head>
+
+<body>
+
+<nav class="navbar" id="navigatie">
+
+
+  <div class="container">
+    <a class="navbar-brand" th:href="@{/}">
+      <img th:src="@{/img/upb.png}" alt="Bootstrap" width="30" height="24" style="border-radius: 50%;">
+    </a>
+    <div class="butoane">
+      <a th:href="@{/bank}">Bank</a>
+      <a th:href="@{/branches}">Branches</a>
+      <a th:href="@{/employees}">Employees</a>
+    </div>
+  </div>
+
+</nav>
+
+
+
+  <div class="container mt-5">
+    <h2>Branches Table</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">idBranch</th>
+          <th scope="col">nameBranch</th>
+          <th scope="col">cityBranch</th>
+          <th scope="col">addressBranch</th>
+          <th scope="col">phoneBranch</th>
+          <th scope="col">bankBranch</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="branches:${branches}">
+          <th scope="row" th:text="${branches.idBranch}"></th>
+          <td th:text="${branches.nameBranch}"></td>
+          <td th:text="${branches.cityBranch}"></td>
+          <td th:text="${branches.addressBranch}"></td>
+          <td th:text="${branches.phoneBranch}"></td>
+          <td th:text="${branches.bankBranch.idBank}"></td>
+          <td>
+            <a class="btn btn-sm btn-warning" th:href="@{/branches/edit/{idBranch}(idBranch = ${branches.idBranch})}">Edit</a>
+            <a class="btn btn-sm btn-danger" th:href="@{/branches/{idBranch}(idBranch = ${branches.idBranch})}">Delete</a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="container" style="text-align: center;">
+      <a th:href="@{/branches/new}" class="btn btn-primary">Add New Branch</a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

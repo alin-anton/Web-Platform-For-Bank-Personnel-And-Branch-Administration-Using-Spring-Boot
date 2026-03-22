@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bine ai venit!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/indexstyle.css}">
+    <link rel="icon" type="image/png" th:href="@{/img/upb.png}">
+</head>
+<body>
+
+    
+    <nav class="navbar" id="navigatie">
+        
+            
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">
+                <img th:src="@{/img/upb.png}" alt="Bootstrap" width="30" height="24" style="border-radius: 50%;">
+            </a>
+            <div class="butoane">
+                <a th:href="@{/bank}">Bank</a>
+                <a th:href="@{/branches}">Branches</a>
+                <a th:href="@{/employees}">Employees</a>S
+            </div>
+        </div>
+        
+    </nav>
+
+    <div class="container main">
+        
+        <h1>Bine ai venit!</h1>
+        <p>Nume si prenume: Anton Alin-Gabriel</p>
+        <p>Grupa: 432D</p>
+
+        <p>Pentru realizarea acestui proiect s-au folosit urmatoarele tehnologii:</p>
+        <ul>
+            <li>HTML,CSS,Bootstrap pentru Frontend</li>
+            <li>MySQL pentru realizarea bazei de date</li>
+            <li>Java Spring Boot pentru Backend(1)</li>
+            <li>Python Flask pentru Backend(2)</li>
+        </ul>
+    </div>
+
+
+    
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   
+</body>
+</html>
